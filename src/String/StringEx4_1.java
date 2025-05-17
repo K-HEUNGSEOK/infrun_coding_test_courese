@@ -4,9 +4,8 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class StringEx4 {
+public class StringEx4_1 {
     public static void main(String[] args) throws IOException {
-        //단어 뒤집기
         System.setIn(new FileInputStream("src/input.txt"));
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
