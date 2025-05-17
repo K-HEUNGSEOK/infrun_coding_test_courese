@@ -6,21 +6,20 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
         System.setIn(new FileInputStream("src/input.txt"));
         Scanner sc = new Scanner(System.in);
-        String str = sc.next();
-        char target = sc.next().charAt(0);
-        System.out.println(solution(str, target));
+        //대문자와 소문자가 같이 오는데 각각변환해라
+        char[] arr = sc.next().toCharArray();
+
+        solution(arr);
+        System.out.println(arr);
     }
-    static int solution(String str, char target){
-        int count = 0;
-        str = str.toLowerCase();
-        if (target < (char)97){
-            target = (char) (target + 32);
-        }
-        for(int i = 0; i < str.length(); i ++){
-            if (str.charAt(i) == target ){
-                count ++;
+
+    private static void solution(char[] arr) {
+        for(int i = 0; i < arr.length; i ++){
+            if (arr[i] >= 65 && arr[i] < 97){
+                arr[i] = (char) (arr[i] - 'A' + 'a');
+            }else {
+                arr[i] = (char) (arr[i] - 'a' + 'A');
             }
         }
-        return count;
     }
 }
