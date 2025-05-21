@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class ArrayEx7 {
+public class ArrayEx7_1 {
         public static void main(String[] args) throws IOException {
             System.setIn(new FileInputStream("src/input.txt"));
             Scanner sc = new Scanner(System.in);
